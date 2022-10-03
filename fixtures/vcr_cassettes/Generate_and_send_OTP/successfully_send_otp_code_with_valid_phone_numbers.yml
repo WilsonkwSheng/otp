@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twilio.com/2010-04-01/Accounts/ACb1ed57df21019a27c0064a97db452733/Messages.json
+    body:
+      encoding: UTF-8
+      string: Body=This+is+your+OTP+code.+711215&From=%2B15617834176&To=%2B60102319970
+    headers:
+      User-Agent:
+      - twilio-ruby/5.72.0 (darwin21 arm64) Ruby/3.0.1
+      Accept-Charset:
+      - utf-8
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Authorization:
+      - Basic QUNiMWVkNTdkZjIxMDE5YTI3YzAwNjRhOTdkYjQ1MjczMzo1NjAzMzJhZjA1YjM1YWE2MTQ4YjE0YWE0MmMxMDQ5Yg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 03 Oct 2022 03:24:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '831'
+      Connection:
+      - keep-alive
+      Twilio-Concurrent-Requests:
+      - '1'
+      Twilio-Request-Id:
+      - RQ172427f2c1cd0834b8bc3dfe6b061551
+      Twilio-Request-Duration:
+      - '0.137'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      X-Home-Region:
+      - us1
+      X-Api-Domain:
+      - api.twilio.com
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"body": "Sent from your Twilio trial account - This is your OTP code.
+        711215", "num_segments": "1", "direction": "outbound-api", "from": "+15617834176",
+        "date_updated": "Mon, 03 Oct 2022 03:24:37 +0000", "price": null, "error_message":
+        null, "uri": "/2010-04-01/Accounts/ACb1ed57df21019a27c0064a97db452733/Messages/SM172427f2c1cd0834b8bc3dfe6b061551.json",
+        "account_sid": "ACb1ed57df21019a27c0064a97db452733", "num_media": "0", "to":
+        "+60102319970", "date_created": "Mon, 03 Oct 2022 03:24:37 +0000", "status":
+        "queued", "sid": "SM172427f2c1cd0834b8bc3dfe6b061551", "date_sent": null,
+        "messaging_service_sid": null, "error_code": null, "price_unit": "USD", "api_version":
+        "2010-04-01", "subresource_uris": {"media": "/2010-04-01/Accounts/ACb1ed57df21019a27c0064a97db452733/Messages/SM172427f2c1cd0834b8bc3dfe6b061551/Media.json"}}'
+  recorded_at: Mon, 03 Oct 2022 03:24:37 GMT
+recorded_with: VCR 6.1.0
