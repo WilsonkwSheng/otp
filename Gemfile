@@ -21,6 +21,7 @@ gem 'puma', '~> 5.0'
 gem 'rotp'
 gem 'base32'
 gem 'twilio-ruby'
+gem 'devise_token_auth'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -36,12 +37,20 @@ group :development, :test do
   gem 'vcr'
   gem 'webmock'
   gem 'timecop'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
