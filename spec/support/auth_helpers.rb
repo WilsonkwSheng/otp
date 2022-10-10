@@ -2,12 +2,12 @@
 
 module AuthHelpers
   def auth_headers(user)
-    post('/users/sign_in/',
+    post("/users/sign_in/",
       params: {
         email: user.email,
         password: user.password,
       }, as: :json)
-    response.headers.slice('client', 'access-token', 'uid')
+    response.headers.slice("client", "access-token", "uid")
   end
 end
 

@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class OtpController < ApplicationController
   def create
     response = Otp::Generate.new(params[:phone_number]).generate
     if response[:success]
-      render(json: { success: response[:success], data: 'Successfully sent OTP code.' }, status: :ok)
+      render(json: { success: response[:success], data: "Successfully sent OTP code." }, status: :ok)
       return
     end
 

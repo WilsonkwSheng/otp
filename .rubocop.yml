@@ -1,0 +1,12 @@
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+AllCops:
+  Exclude:
+    - bin/*
+    - vendor/**/*
+    - tmp/**/*
+    - config/initializers/*
+    - Gemfile
+    - Rakefile
+    - config/environments/*

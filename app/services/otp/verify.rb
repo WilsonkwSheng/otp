@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Otp
   class Verify < Otp::Index
     def verify(otp_code)
@@ -5,12 +7,12 @@ module Otp
       if response.present?
         {
           success: true,
-          data: 'Successfully verified OTP.'
+          data: "Successfully verified OTP.",
         }
       else
         {
           success: false,
-          data: "Unable to verify OTP. OTP is invalid or past its expiry time. Please try again."
+          data: "Unable to verify OTP. OTP is invalid or past its expiry time. Please try again.",
         }
       end
     end

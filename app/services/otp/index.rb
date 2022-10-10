@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Otp
   class Index
     attr_reader :phone_number

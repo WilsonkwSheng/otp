@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 module Otp
   class Generate < Otp::Index
     def generate
       message = twilio_service.messages.create(
         body: "This is your OTP code. #{one_time_password}",
-        from: ENV['TWILIO_PHONE_NUMBER'],
-        to: phone_number
+        from: ENV["TWILIO_PHONE_NUMBER"],
+        to: phone_number,
       )
       { success: true, data: message }
     rescue => error
@@ -14,7 +16,7 @@ module Otp
     private
 
     def twilio_service
-      Twilio::REST::Client.new(ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN'])
+      Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
     end
 
     def one_time_password
